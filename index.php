@@ -3,4 +3,5 @@
 	define('APP_NAME','web');
 	define('APP_DEBUG',true);
 	require './frogphp/Frogphp.php';
+
 ?>
