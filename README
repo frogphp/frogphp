@@ -7,7 +7,18 @@ frogphp 1.1 版 - a simple php5 [framework]
  作者：silenceper
  email:silenceper@gmail.com
 
-说明：
+更新说明：
+
+
+2012-07-28: 添加页面跳转，可以再控制器中使用
+	$this->success($message,$jumpUrl,$waitSecond) 
+	$this->error($message,$jumpUrl,$waitSecond) 
+来实现成功和失败的跳转。   
+	$jumpUrl 默认未上一个页面    $waitSecond 成功时 默认未 1秒    失败时默认未3秒
+	
+
 本框架参考了thinkphp、brophp等框架，感谢!
+
+
 		
 		                                     	 2012-7-26 19:00

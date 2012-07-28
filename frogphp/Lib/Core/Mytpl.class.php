@@ -24,14 +24,17 @@ class Mytpl extends Smarty{
 		$this->assign('__URL__',__URL__);
 		$this->assign('__ACTION__',__ACTION__);
 		$this->assign('__SELF__',__SELF__);
-		//注册函数
 		if(is_null($template)){
 			$template=MODULE_NAME.'/'.ACTION_NAME.C('TMPL_SUFFIX');
-		}elseif(strstr($template,'/')){
+		}elseif(strstr($template,'.')){
+			//直接使用模板路径
+		}elseif(strstr($template,':')){
+			$template=str_replace(':', '/', $template);
 			$template=$template.C('TMPL_SUFFIX');
 		}else{
 			$template=MODULE_NAME.'/'.$template.C('TMPL_SUFFIX');
 		}
+		
 		Debug::addmsg("使用模板 <b> $template </b>");
 		parent::display($template, $cache_id, $compile_id, $parent);
 	}
@@ -40,11 +43,15 @@ class Mytpl extends Smarty{
 	public function isCached($template = null, $cache_id = null, $compile_id = null, $parent = null){
 		if(is_null($template)){
 			$template=MODULE_NAME.'/'.ACTION_NAME.C('TMPL_SUFFIX');
-		}elseif(strstr($template,'/')){
+		}elseif(strstr($template,'.')){
+			//直接使用模板路径
+		}elseif(strstr($template,':')){
+			$template=str_replace(':', '/', $template);
 			$template=$template.C('TMPL_SUFFIX');
 		}else{
 			$template=MODULE_NAME.'/'.$template.C('TMPL_SUFFIX');
 		}
+		
 		return parent::isCached($template, $cache_id, $compile_id, $parent);
 	}
 	
@@ -56,11 +63,15 @@ class Mytpl extends Smarty{
 	public function clear_cache($template = null, $cache_id = null, $compile_id = null, $exp_time = null){
 		if(is_null($template)){
 			$template=MODULE_NAME.'/'.ACTION_NAME.C('TMPL_SUFFIX');
-		}elseif(strstr($template,'/')){
+		}elseif(strstr($template,'.')){
+			//直接使用模板路径
+		}elseif(strstr($template,':')){
+			$template=str_replace(':', '/', $template);
 			$template=$template.C('TMPL_SUFFIX');
 		}else{
 			$template=MODULE_NAME.'/'.$template.C('TMPL_SUFFIX');
 		}
+		
 		return parent::clearCache($template, $cache_id, $compile_id, $exp_time);
 	}
 }

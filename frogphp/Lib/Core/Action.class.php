@@ -28,4 +28,59 @@ class Action extends Mytpl{
 				exit("<meta http-equiv='Refresh' content='0';URL={$uri}'>");
 			}
 		}
+		
+		/*
+		 * 用于成功跳转
+		 * 
+		 */
+		
+		function success($message,$jumpUrl=null,$waitSecond=1){
+			//判断变量是否为数字
+			if(is_numeric($waitSecond)){
+				$this->assign('waitSecond',$waitSecond);
+			}else{
+				Debug::addmsg('success函数参数错误!');
+				return;
+			}
+			$jumpUrl=$this->get_jumpUrl($jumpUrl);
+			$this->assign('jumpUrl',$jumpUrl);
+			$this->assign('message',$message);
+			$this->display(FROG_TPL.'success.tpl');
+		}
+		
+		/*
+		 * 用于失败跳转
+		*
+		*/
+		
+		function error($message,$jumpUrl=null,$waitSecond=3){
+			//判断变量是否为数字
+			if(is_numeric($waitSecond)){
+				$this->assign('waitSecond',$waitSecond);
+			}else{
+				Debug::addmsg('success函数参数错误!');
+				return;
+			}
+			$jumpUrl=$this->get_jumpUrl($jumpUrl);
+			$this->assign('jumpUrl',$jumpUrl);
+			$this->assign('message',$message);
+			$this->display(FROG_TPL.'error.tpl');
+		}
+		
+		//处理跳转的url
+		private function get_jumpUrl($jumpUrl){
+			$this->caching=false;//关闭缓存
+			if(!isset($jumpUrl)){
+				$jumpUrl=$_SERVER['HTTP_REFERER'];
+			}else{
+				//匹配格式 ： 模块/方法
+				if(strstr($jumpUrl, '/')){
+					$jumpUrl=__APP__.'/'.$jumpUrl;
+				}else{
+				//匹配格式： 方法
+					$jumpUrl=__APP__.'/'.MODULE_NAME.'/'.$jumpUrl;
+				}
+			}
+			return $jumpUrl;
+		}
 }
