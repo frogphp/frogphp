@@ -1,3 +1,4 @@
+
 frogphp 1.1 版 - a simple php5 [framework]
 本框架根据MVC模式编写，完全实现面向对象！
 下载之后只需要使用到核心的文件夹frogphp，不过我们已经为你建立了一个测试的index.php入口文件 供你学习！
