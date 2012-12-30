@@ -1,14 +1,13 @@
-frogphp 1.1 版 - a simple php5 [framework]
+frogphp 0.1 版 - a simple php5 [framework]
 本框架根据MVC模式编写，完全实现面向对象！
 下载之后只需要使用到核心的文件夹frogphp，不过我们已经为你建立了一个测试的index.php入口文件 供你学习！
 
-本框架为1.1测试版  可能存在bug，我们会不断的完善！
+本框架为0.1测试版  , 我现在还在不断的完善!
 
  作者：silenceper
  email:silenceper@gmail.com
 
 更新说明：
-
 
 2012-07-28: 添加页面跳转，可以再控制器中使用
 	$this->success($message,$jumpUrl,$waitSecond) 
@@ -16,7 +15,6 @@ frogphp 1.1 版 - a simple php5 [framework]
 来实现成功和失败的跳转。   
 	$jumpUrl 默认未上一个页面    $waitSecond 成功时 默认未 1秒    失败时默认未3秒
 	
-
 本框架参考了thinkphp、brophp等框架，感谢!
 
 		                                     	 2012-12-28 16:50
