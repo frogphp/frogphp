@@ -4,6 +4,8 @@ frogphp 1.1 beta 版 - a simple php5 [framework]
 
 本框架为1.1测试版  , 我现在还在不断的完善!
 
+本框架参考了thinkphp、brophp等框架，感谢!
+
  作者：silenceper
  email:silenceper@gmail.com
 
@@ -17,6 +19,5 @@ frogphp 1.1 beta 版 - a simple php5 [framework]
 	
 
 2013-04-01  更新数据库驱动类等信息！
-本框架参考了thinkphp、brophp等框架，感谢!
 
 		                            
