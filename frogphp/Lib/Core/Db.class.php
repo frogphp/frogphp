@@ -1,5 +1,5 @@
 <?php
-//Dbc.calss.php  数据库中间层实现类
+//Db.calss.php  数据库中间层实现类
 class Db{
 
 	// 数据库类型
@@ -9,7 +9,7 @@ class Db{
 	// 是否显示调试信息 如果启用会在日志文件记录sql语句
 	public $debug             = false;
 	// 当前操作所属的模型名
-	protected $model =  '_think_';
+	protected $model =  '_frog_';
 	// 是否使用永久连接
 	protected $pconnect         = false;
 	// 当前SQL指令
@@ -226,9 +226,9 @@ class Db{
 	 */
 	protected function parseValue($value) {
 		if(is_string($value)) {
-			$value = '\''.$this->escapeString($value).'\'';
+			$value = '\''.$this->escapeStr($value).'\'';
 		}elseif(isset($value[0]) && is_string($value[0]) && strtolower($value[0]) == 'exp'){
-			$value   =  $this->escapeString($value[1]);
+			$value   =  $this->escapeStr($value[1]);
 		}elseif(is_array($value)) {
 			$value   =  array_map(array($this, 'parseValue'),$value);
 		}elseif(is_null($value)){
@@ -834,7 +834,7 @@ class Db{
 	 * @return string
 	 +----------------------------------------------------------
 	 */
-	public function escapeString($str) {
+	public function escapeStr($str) {
 		return addslashes($str);
 	}
 	

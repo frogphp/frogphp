@@ -30,7 +30,7 @@ function C($name=null, $value=null) {
 }
 
 /*
- * D 方法快捷的实例化Model  或者自定义的Model 
+ * 	 D 方法快捷的实例化Model  或者自定义的Model 
  * 	 D('user')   可以实例化自定义模型 UserModel.class.php
  */
 function D($name=''){

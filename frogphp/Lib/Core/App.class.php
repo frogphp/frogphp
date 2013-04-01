@@ -17,19 +17,8 @@ class App{
 		}
 		//创建项目目录
 		Structure::build_app();
-		//设置URL调度
+		//设置URL调度   设置URL常量
 		Dispatcher::dispatch();
-		//定义系统常量    
-		//ROOT目录
-		defined('__ROOT__') or define('__ROOT__',str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']));
-		//当前项目（入口文件）地址
-		defined('__APP__') or define('__APP__',$_SERVER['SCRIPT_NAME']);
-		//当前模块的URL
-		defined('__URL__') or define('__URL__', __APP__.'/'.MODULE_NAME);
-		//当前操作的URL地址
-		defined('__ACTION__') or define('__ACTION__', __APP__.'/'.MODULE_NAME.'/'.ACTION_NAME);
-		//当前URL地址
-		defined('__SELF__') or define('__SELF__', $_SERVER['REQUEST_URI']);
 	}
 	
 	static function run(){

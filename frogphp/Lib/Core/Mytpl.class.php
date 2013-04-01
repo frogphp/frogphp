@@ -24,6 +24,8 @@ class Mytpl extends Smarty{
 		$this->assign('__URL__',__URL__);
 		$this->assign('__ACTION__',__ACTION__);
 		$this->assign('__SELF__',__SELF__);
+		$this->assign('ACTION_NAME',ACTION_NAME);
+		$this->assign('MODULE_NAME',MODULE_NAME);
 		if(is_null($template)){
 			$template=MODULE_NAME.'/'.ACTION_NAME.C('TMPL_SUFFIX');
 		}elseif(strstr($template,'.')){
@@ -60,7 +62,7 @@ class Mytpl extends Smarty{
 	 *  @param	string	$tpl_file	模板文件
 	 * @param	mixed	$cache_id	缓存的ID
 	 */
-	public function clear_cache($template = null, $cache_id = null, $compile_id = null, $exp_time = null){
+	public function clearCache($template=null, $cache_id = null, $compile_id = null, $exp_time = null, $type = null){
 		if(is_null($template)){
 			$template=MODULE_NAME.'/'.ACTION_NAME.C('TMPL_SUFFIX');
 		}elseif(strstr($template,'.')){
@@ -72,7 +74,7 @@ class Mytpl extends Smarty{
 			$template=MODULE_NAME.'/'.$template.C('TMPL_SUFFIX');
 		}
 		
-		return parent::clearCache($template, $cache_id, $compile_id, $exp_time);
+		return parent::clearCache($template, $cache_id, $compile_id, $exp_time, $type);
 	}
 }
 

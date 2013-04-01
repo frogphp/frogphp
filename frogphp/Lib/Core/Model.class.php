@@ -54,8 +54,6 @@ class Model{
 	}
 	
 	
-	
-	
 	function db(){
 		//可扩展
 		$this->db = Db::getInstance();
@@ -272,7 +270,7 @@ class Model{
 		}elseif(in_array(strtolower($method),array('count','sum','min','max','avg'),true)){
 			// 统计查询的实现
 			$field =  isset($args[0])?$args[0]:'*';
-			return $this->getField(strtoupper($method).'('.$field.') AS tp_'.$method);
+			return $this->getField(strtoupper($method).'('.$field.') AS fg_'.$method);
 		}elseif(strtolower(substr($method,0,5))=='getby') {
 			// 根据某个字段获取记录
 			$field   =   strtolower(substr($method,5));
@@ -594,7 +592,6 @@ class Model{
 	public function find($options=array()) {
 		if(is_numeric($options) || is_string($options)) {
 			$where[$this->getPk()] =$options;
-			dump($where);
 			$options = array();
 			$options['where'] = $where;
 		}
