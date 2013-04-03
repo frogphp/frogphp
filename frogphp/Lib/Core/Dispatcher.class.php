@@ -1,5 +1,12 @@
 <?php
-//url调度类
+/**
+ * Frogphp
+ * url调度类
+ *
+ * @author silenceper <silenceper@gmail.com>
+ * @link http://www.ttzxnet.com/frogphp/
+ * @copyright Copyright &copy; 2012-2013 Frogphp
+ */
 class Dispatcher{
     static function dispatch(){
         if(empty($_SERVER['PATH_INFO'])){

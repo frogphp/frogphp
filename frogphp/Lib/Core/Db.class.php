@@ -1,5 +1,13 @@
 <?php
-//Db.calss.php  数据库中间层实现类
+/**
+ * Frogphp
+ * Db.calss.php  数据库中间层实现类
+ *
+ *
+ * @author silenceper <silenceper@gmail.com>
+ * @link http://www.ttzxnet.com/frogphp/
+ * @copyright Copyright &copy; 2012-2013 Frogphp
+ */
 class Db{
 
 	// 数据库类型

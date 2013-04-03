@@ -1,4 +1,13 @@
 <?php
+/**
+ * Frogphp
+ * Frogphp 默认配置
+ *
+ *
+ * @author silenceper <silenceper@gmail.com>
+ * @link http://www.ttzxnet.com/frogphp/
+ * @copyright Copyright &copy; 2012-2013 Frogphp
+ */
 return array(
 		/* 数据库设置 */
 		

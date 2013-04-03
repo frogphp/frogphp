@@ -1,5 +1,13 @@
 <?php
-//控制器基类
+/**
+ * Frogphp 控制器基类
+ * 所有控制器都必须继承此类
+ *
+ *
+ * @author silenceper <silenceper@gmail.com>
+ * @link http://www.ttzxnet.com/frogphp/
+ * @copyright Copyright &copy; 2012-2013 Frogphp 
+ */
 class Action extends Mytpl{
 		/*
 		 * 用于在控制器中进行位置重定向

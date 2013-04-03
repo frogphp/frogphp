@@ -1,6 +1,12 @@
 <?php
-/*
+/**
+ * Frogphp
  * 框架公共函数库
+ *
+ *
+ * @author silenceper <silenceper@gmail.com>
+ * @link http://www.ttzxnet.com/frogphp/
+ * @copyright Copyright &copy; 2012-2013 Frogphp
  */
 
 /*

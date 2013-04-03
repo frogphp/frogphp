@@ -1,9 +1,13 @@
 <?php 
-/*
- * Frogphph 1.1 beta
+/**
+ * Frogphp 1.1 beta
  * Frogphp 入口文件
  * 最后修改日期：2013-04-01 
- *  
+ *
+ *
+ * @author silenceper <silenceper@gmail.com>
+ * @link http://www.ttzxnet.com/frogphp/
+ * @copyright Copyright &copy; 2012-2013 Frogphp
  */
 
 	//设置编码及时区

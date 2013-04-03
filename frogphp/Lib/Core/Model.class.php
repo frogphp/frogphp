@@ -1,7 +1,12 @@
 <?php
-/*
+/**
+ * Frogphp
  * Model.class.php   模型基类
- * 
+ *
+ *
+ * @author silenceper <silenceper@gmail.com>
+ * @link http://www.ttzxnet.com/frogphp/
+ * @copyright Copyright &copy; 2012-2013 Frogphp
  */
 class Model{
 	// 操作状态

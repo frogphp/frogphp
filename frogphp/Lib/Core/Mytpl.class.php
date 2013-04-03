@@ -1,4 +1,13 @@
 <?php
+/**
+ * Frogphp
+ * Mytpl.class.php   
+ *
+ *
+ * @author silenceper <silenceper@gmail.com>
+ * @link http://www.ttzxnet.com/frogphp/
+ * @copyright Copyright &copy; 2012-2013 Frogphp
+ */
 class Mytpl extends Smarty{
 	/**
 	 * 构造方法，用于初使化Smarty对象中的成员属性

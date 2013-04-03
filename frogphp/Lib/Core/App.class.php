@@ -1,4 +1,12 @@
 <?php
+/**
+ *  Frogphp
+ * App.class.php
+ *
+ * @author silenceper <silenceper@gmail.com>
+ * @link http://www.ttzxnet.com/frogphp/
+ * @copyright Copyright &copy; 2012-2013 Frogphp
+ */
 class App{
 	static function init(){
 		// 注册AUTOLOAD方法

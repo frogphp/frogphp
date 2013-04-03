@@ -1,5 +1,13 @@
 <?php
-//调试类 修改自brophp
+/**
+ * Frogphp
+ * 调试类 修改自brophp
+ *
+ *
+ * @author silenceper <silenceper@gmail.com>
+ * @link http://www.ttzxnet.com/frogphp/
+ * @copyright Copyright &copy; 2012-2013 Frogphp
+ */
 	class Debug {
 		static $includefile=array();
 		static $info=array();

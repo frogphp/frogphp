@@ -1,5 +1,13 @@
 <?php
-//创建项目结构
+/**
+ * Frogphp
+ * 创建项目结构
+ *
+ *
+ * @author silenceper <silenceper@gmail.com>
+ * @link http://www.ttzxnet.com/frogphp/
+ * @copyright Copyright &copy; 2012-2013 Frogphp
+ */
 class Structure{
     public static $mess=array();
 	//创建项目结构
