@@ -54,10 +54,6 @@ class App{
 			return;
 		}
 		
-		//如果存在_initialize 则优先执行这个初始化接口
-		if(method_exists($module, '_initialize')){
-			call_user_func(array(new $module,'_initialize'));
-		}
 		//执行当前操作
 		if(method_exists($module, $action)){
 			call_user_func(array(new $module,$action));

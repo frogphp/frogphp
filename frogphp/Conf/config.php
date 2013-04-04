@@ -16,7 +16,7 @@ return array(
 		 *  pdo  mssql  mysqli 
 		 *  注意：如需使用pdo形式链接其他数据库需要在Dbpdo.class.php   get_dsn方法中手动配置
 		 */
-    	'DB_TYPE'               => 'pdo',     
+    	'DB_TYPE'               => 'mysqli',     
 		
 		'DB_HOST'               => 'localhost', // 服务器地址
 		'DB_NAME'               => '',          // 数据库名

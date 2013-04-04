@@ -37,7 +37,7 @@ class Dispatcher{
         defined('ACTION_NAME') or define('ACTION_NAME',strtolower($a));
         //ROOT目录
         defined('__ROOT__') or define('__ROOT__',str_replace('\\','/',$_SERVER['DOCUMENT_ROOT']));
-        
+        defined('__BASE__') or define('__BASE__',str_replace('\\','/',dirname($_SERVER['SCRIPT_NAME'])));
         if(C('URL_MODEL') == 'REWRITE'){
         	//当前项目地址  URL_REWRITE 重写模式
         	$url    =   dirname($_SERVER['SCRIPT_NAME']);

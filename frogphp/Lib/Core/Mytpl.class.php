@@ -29,6 +29,7 @@ class Mytpl extends Smarty{
 	function display($template = null, $cache_id = null, $compile_id = null, $parent = null){
 		//将部分常量分配给模板
 		$this->assign('__ROOT__',__ROOT__);
+		$this->assign('__BASE__',__BASE__);
 		$this->assign('__APP__',__APP__);
 		$this->assign('__URL__',__URL__);
 		$this->assign('__ACTION__',__ACTION__);
