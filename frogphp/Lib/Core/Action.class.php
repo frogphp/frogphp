@@ -40,7 +40,7 @@ class Action extends Mytpl{
 				header('Location: ' . $uri);
 				exit;
 			}else{
-				exit("<meta http-equiv='Refresh' content='0';URL={$uri}'>");
+				exit("<meta http-equiv='Refresh' content='0;URL={$uri}'>");
 			}
 		}
 		
