@@ -43,7 +43,7 @@ class App{
 		if(!preg_match('/^[A-Za-z_0-9]+$/',CONTROLLER_NAME)){
 			$controller=false;
 		}else{
-			$controller=CONTROLLER_NAME.'Controller';
+			$controller=ucfirst(CONTROLLER_NAME).'Controller';
 			//判断控制器是否存在
 			$srccontrolerfile=CONTROLLER_PATH.$controller.'.class.php';
 			if(!file_exists($srccontrolerfile) && APP_DEBUG){
@@ -89,7 +89,7 @@ class App{
 		}elseif(substr($class,0,2)=='Db'){
 			if(require_cache(FROG_DB.$class.'.class.php')) return ;
 		//直接加载Smarty
-		}elseif(substr($class,-6)=='Vender'){
+		}elseif(substr($class,-6)=='Vendor'){
 			if(require_cache(VENDOR_PATH.$class.'.class.php')) return ;
 		}
 	}

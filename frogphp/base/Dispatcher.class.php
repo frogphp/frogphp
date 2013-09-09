@@ -33,7 +33,7 @@ class Dispatcher{
         }
         
         //将Model  Action分别赋予常量   并全部转为小写
-        defined('CONTROLLER_NAME') or define('CONTROLLER_NAME',ucfirst(strtolower($c)));
+        defined('CONTROLLER_NAME') or define('CONTROLLER_NAME',strtolower($c));
         defined('ACTION_NAME') or define('ACTION_NAME',strtolower($a));
     }
 }

@@ -7,7 +7,7 @@
  * Time: 上午10:25
  * Description: 控制器基类，所有控制器必须继承此类
  */
-	class Controller extends SmartyVender{
+	class Controller extends SmartyVendor{
 	/**
 	 * [redirect description]
 	 * @param  [type] $path [description]

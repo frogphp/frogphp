@@ -47,6 +47,7 @@ include FROG_PATH.'common/functions.php';
 
 //加载框架默认配置
 if(file_exists(FROG_PATH.'common/config.php')) C(include FROG_PATH.'common/config.php');
+
 //包含项目配置文件  会覆盖框架默认的配置
 if(file_exists(APP_PATH.'common/config.php')) C(include COMMON_PATH.'config.php');
 
@@ -55,10 +56,13 @@ $comm_fun=COMMON_PATH.'function.php';
 if(file_exists($comm_fun)) require_cache($comm_fun);
 
 require_cache(FROG_BASE.'App.class.php');	
+
 //项目初始化  实现 创建目录 写入初始化配置，url调度
 App::init();
+
 //项目执行
 App::run();
+
 //项目结束  错误输出
 if(APP_DEBUG){
 	Debug::addmsg("会话ID:".session_id());
