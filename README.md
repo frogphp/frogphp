@@ -1,12 +1,12 @@
-Frogphp - php学习框架！
-本框架根据MVC模式编写，完全实现面向对象！
- 作者：silenceper
- email:silenceper@gmail.com
- website:http://silenceper.com
+Frogphp - php学习框架!  
+本框架根据MVC模式编写，完全实现面向对象!  
+ 作者：silenceper  
+ email:silenceper@gmail.com  
+ website:http://silenceper.com  
 
 #快速入门
 
-##1、入口文件配置：
+###1、入口文件配置：
 ```php
 	define('app_path',str_replace('\\', '/', dirname(__file__).'/').'web/');
 	define('app_name','web');
@@ -21,7 +21,7 @@ Frogphp - php学习框架！
 ./web/models : 存放项目model 例如UserModel.class.php
 ./web/runtime  : smarty 缓存
 ./web/views :视图
-##2、输出hello world
+###2、输出hello world
 创建控制器IndexController.class.php
 
 ...php
@@ -34,15 +34,15 @@ class IndexController extends Controller{
 
 这样就可以通过 http://localhost/index.php?c=index&amp;a=index
 
-<strong>所有控制器都必须继承Controller基类！</strong>
+*所有控制器都必须继承Controller基类!  
+默认controller 为index，默认的action为index*
 
-<strong>默认controller 为index，默认的action为index</strong>
-<h2>3、使用数据库</h2>
+###3、使用数据库
 数据库配置：
 
 在./web/common/config.php 中配置:
 
-[php]
+```php
 <?php return array(   'db'=-->array(
   'connectionString'=>'mysql:host=localhost;dbname=demodb',
   'dbType'=>'pdo',
@@ -53,48 +53,48 @@ class IndexController extends Controller{
 ),
 )
 ?>
-[/php]
-
+```
 在models目录下创建 UserModel.class.php 文件
 
-[php]
+```php
 class UserModel extends Model{
     public function getAllUser(){
       $sql="select * from `{{user}}`";
       return $this->query($sql);
     }
 }
-[/php]
+```
 
-<strong>在controller中调用getAllUser 方法:</strong>
+*在controller中调用getAllUser 方法:*
 
-[php]
+```php
 
 $userData=M('user')->getAllUser();
 
-[/php]
+```
 
 实例化UserModel类应该使用M(‘user’) ，M方法可以帮你实现实例化model并防止在controller重复调用model而重复实例化造成的性能损失！
 
-<strong>所有的model都必须继承Model基类。</strong>
-<h2>4、使用视图</h2>
-Frogphp 框架视图层使用smarty模板引擎，重写了display方法方便使用。
+*所有的model都必须继承Model基类。*
 
-例如渲染某个视图：
+###4、使用视图
+Frogphp 框架视图层使用smarty模板引擎，重写了display方法方便使用. 
 
-$this-&gt;display();
+例如渲染某个视图:  
 
-表示渲染
+$this-&gt;display();  
 
-./web/views/default/index/index.htm文件
+表示渲染  
 
-其中default 为默认模板名可在配置文件中更改 .
+./web/views/default/index/index.htm文件  
 
-index目录为控制器名.
+其中default 为默认模板名可在配置文件中更改 .  
 
-index.html 对应的就是默认控制器index.
+index目录为控制器名.  
 
-想要渲染./web/views/default/site/index.htm
+index.html 对应的就是默认控制器index.  
 
-就可以使用$this-&gt;display('site/index');
+想要渲染./web/views/default/site/index.htm  
+
+就可以使用$this-&gt;display('site/index');  
 
