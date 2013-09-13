@@ -3,15 +3,16 @@ Frogphp - php学习框架！
  作者：silenceper
  email:silenceper@gmail.com
  website:http://silenceper.com
-<hr/>
-<h1><strong>快速入门</strong></h1>
-<h2>1、入口文件配置：</h2>
-[php]
-        define('APP_PATH',str_replace('\\', '/', dirname(__FILE__).'/').'web/');
-	define('APP_NAME','web');
-	define('APP_DEBUG',true);
-	require './frogphp/Frogphp.php';
-[/php]
+
+#快速入门
+
+##1、入口文件配置：
+...php
+	define('app_path',str_replace('\\', '/', dirname(__file__).'/').'web/');
+	define('app_name','web');
+	define('app_debug',true);
+	require './frogphp/frogphp.php';
+...
 
 手动创建项目目录：
 
@@ -20,16 +21,16 @@ Frogphp - php学习框架！
 ./web/models : 存放项目model 例如UserModel.class.php
 ./web/runtime  : smarty 缓存
 ./web/views :视图
-<h2>2、输出hello world</h2>
+##2、输出hello world
 创建控制器IndexController.class.php
 
-[php]
+...php
 class IndexController extends Controller{
 		public function index(){
 			echo 'hello world';
 		}
 	}
-[/php]
+...
 
 这样就可以通过 http://localhost/index.php?c=index&amp;a=index
 
