@@ -92,13 +92,14 @@ $this->display();
 
 ./web/views/default/index/index.htm 文件  
 
-其中default 为默认模板名可在配置文件中更改 .  
+其中default 为默认模板名可在配置文件中更改.  
+**index目录为控制器名.   
 
-**index目录为控制器名. ** 
+index.html 对应的就是默认控制器index.**    
 
-index.html 对应的就是默认控制器index.  
+想要渲染./web/views/default/site/index.htm    
 
-想要渲染./web/views/default/site/index.htm  
-
-就可以使用$this-&gt;display('site/index');  
-
+就可以使用  
+```php
+$this->display('site/index');  
+```
