@@ -27,6 +27,7 @@ defined('MODEL_PATH') or define('MODEL_PATH', APP_PATH.'models/');
 defined('VENDOR_PATH') or define('VENDOR_PATH', FROG_PATH.'vendors/');
 defined('COMMON_PATH') or define('COMMON_PATH', APP_PATH.'common/');
 defined('VIEW_PATH') or define('VIEW_PATH', APP_PATH.'views/');
+defined('PLUGIN_PATH') or define('PLUGIN_PATH', APP_PATH.'plugin/');
 defined('RUNTIME_PATH') or define('RUNTIME_PATH', APP_PATH.'Runtime/');
 
 //包含debug类

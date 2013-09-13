@@ -34,12 +34,13 @@ class SmartyVendor extends Smarty{
 		$this->assign('__URL__',__URL__);
 		$this->assign('__ACTION__',__ACTION__);
 		$this->assign('__SELF__',__SELF__);
+		$this->assign('siteName',C('siteName'));
 		if(is_null($template)){
 			$template=CONTROLLER_NAME.'/'.ACTION_NAME.C('view_suffix');
 		}elseif(strstr($template,'.')){
 			//直接使用模板路径
-		}elseif(strstr($template,':')){
-			$template=str_replace(':', '/', $template);
+		}elseif(strstr($template,'/')){
+			$template=strtolower($template);
 			$template=$template.C('view_suffix');
 		}else{
 			$template=CONTROLLER_NAME.'/'.$template.C('view_suffix');

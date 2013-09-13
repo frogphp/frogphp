@@ -46,6 +46,27 @@
 			return self::$_pdo;
 		}
 
+
+		/**
+		 * 执行一条具有结果集的sql语句 返回一条记录
+		 * @param $sql
+		 * @param array $params
+		 * @return mixed
+		 */
+		public function queryRow($sql,$params=array()){
+			if(!empty(self::$PDOStatement))$this->free();
+
+			$this->prepare($sql);
+
+			if(empty($params)){
+				self::$PDOStatement->execute();
+			}else{
+				self::$PDOStatement->execute($params);
+			}
+
+			return self::$PDOStatement->fetch(PDO::FETCH_ASSOC);
+		}
+
 		/**
 		 * 执行一条具有结果集的sql语句 并返回执行所有的信息
 		 * @param $sql
@@ -74,7 +95,6 @@
 		 */
 		public function execute($sql,$params=array()){
 			if(!empty(self::$PDOStatement))$this->free();
-
 			$this->prepare($sql);
 			if(empty($params)){
 				return self::$PDOStatement->execute();

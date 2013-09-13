@@ -22,7 +22,9 @@ return array(
 	'right_delimiter'		=>'}>',
 	//默认模板后缀
 	'view_suffix'			=>'.htm',
-	
+	//网站标题
+	'siteName'				=>'爱购物',
+
 	//数据库配置  主数据库
 	'db'=>array(
 		'connectionString'=>'mysql:host=localhost;dbname=test',

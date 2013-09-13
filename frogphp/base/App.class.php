@@ -64,8 +64,8 @@ class App{
 		}
 		
 		//如果存在_initialize 则优先执行这个初始化接口
-		if(method_exists($controller, '_initialize')){
-			call_user_func(array(new $controller,'_initialize'));
+		if(method_exists($controller, 'init')){
+			call_user_func(array(new $controller,'init'));
 		}
 
 		//执行当前操作
@@ -91,6 +91,8 @@ class App{
 		//直接加载Smarty
 		}elseif(substr($class,-6)=='Vendor'){
 			if(require_cache(VENDOR_PATH.$class.'.class.php')) return ;
+		}elseif(substr($class,-6)=='Plugin'){
+			if(require_cache(PLUGIN_PATH.$class.'.class.php')) return ;
 		}
 	}
 	

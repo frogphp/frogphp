@@ -47,7 +47,27 @@ class Model{
 	}
 
 	/**
-	 * 执行具有返回值的sql
+	 * 执行具有返回值的sql 只返回一条记录
+	 * @param $sql
+	 * @param array $params
+	 * @return mixed
+	 */
+	public function queryRow($sql,$params=array()){
+		$this->_db->connect();
+		$this->sql=$sql;
+		$sql=$this->parseTablePrefix($sql);
+		Debug::addmsg($sql,2);
+		try{
+			$result=$this->_db->queryRow($sql,$params);
+		}catch(PDOException $e){
+			Debug::addmsg($this->error());
+			return false;
+		}
+		return $result;
+	}
+
+	/**
+	 * 执行具有返回值的sql 返回所有记录
 	 * @param $sql
 	 * @param array $params
 	 * @return mixed
