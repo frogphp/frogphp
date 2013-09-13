@@ -9,10 +9,10 @@ Frogphp - php学习框架!
 
 ###1、入口文件配置：
 ```php
-	define('app_path',str_replace('\\', '/', dirname(__file__).'/').'web/');
-	define('app_name','web');
-	define('app_debug',true);
-	require './frogphp/frogphp.php';
+	define('APP_PATH','./web/');
+	define('APP_NAME','web');
+	define('APP_DEBUG',true);
+	require './frogphp/Frogphp.php';
 ```
 
 手动创建项目目录:  
