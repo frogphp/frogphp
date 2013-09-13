@@ -7,12 +7,12 @@ Frogphp - php学习框架！
 #快速入门
 
 ##1、入口文件配置：
-...php
+```php
 	define('app_path',str_replace('\\', '/', dirname(__file__).'/').'web/');
 	define('app_name','web');
 	define('app_debug',true);
 	require './frogphp/frogphp.php';
-...
+```
 
 手动创建项目目录：
 
