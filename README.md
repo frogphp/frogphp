@@ -1,4 +1,5 @@
 Frogphp - php学习框架!  
+=======
 本框架根据MVC模式编写，完全实现面向对象!  
  作者：silenceper  
  email:silenceper@gmail.com  
@@ -14,23 +15,23 @@ Frogphp - php学习框架!
 	require './frogphp/frogphp.php';
 ```
 
-手动创建项目目录：
+手动创建项目目录:  
 
-./web/common  : 存放 config.php 配置文件，functions.php 公用函数
-./web/controllers  : 所有控制器都在里，例如定义index控制器:IndexController.class.php
-./web/models : 存放项目model 例如UserModel.class.php
-./web/runtime  : smarty 缓存
-./web/views :视图
+./web/common  : 存放 config.php 配置文件，functions.php 公用函数  
+./web/controllers  : 所有控制器都在里，例如定义index控制器:IndexController.class.php  
+./web/models : 存放项目model 例如UserModel.class.php  
+./web/runtime  : smarty 缓存  
+./web/views :视图  
 ###2、输出hello world
 创建控制器IndexController.class.php
 
-...php
+```php
 class IndexController extends Controller{
 		public function index(){
 			echo 'hello world';
 		}
 	}
-...
+```
 
 这样就可以通过 http://localhost/index.php?c=index&amp;a=index
 
@@ -82,11 +83,13 @@ Frogphp 框架视图层使用smarty模板引擎，重写了display方法方便�
 
 例如渲染某个视图:  
 
-$this-&gt;display();  
+```php
+$this->display();  
+```
 
 表示渲染  
 
-./web/views/default/index/index.htm文件  
+./web/views/default/index/index.htm 文件  
 
 其中default 为默认模板名可在配置文件中更改 .  
 
