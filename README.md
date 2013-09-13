@@ -44,13 +44,14 @@ class IndexController extends Controller{
 在./web/common/config.php 中配置:
 
 ```php
-<?php return array(   'db'=-->array(
-  'connectionString'=>'mysql:host=localhost;dbname=demodb',
-  'dbType'=>'pdo',
-  'username'=>'root',
-  'password'=>'123',
-  'tablePrefix'=>'frog_',
-  'charset'=>'utf8'
+<?php return array(   
+	'db'=-->array(
+	'connectionString'=>'mysql:host=localhost;dbname=demodb',
+	'dbType'=>'pdo',
+	'username'=>'root',
+	'password'=>'123',
+	'tablePrefix'=>'frog_',
+	'charset'=>'utf8'
 ),
 )
 ?>
@@ -59,10 +60,10 @@ class IndexController extends Controller{
 
 ```php
 class UserModel extends Model{
-    public function getAllUser(){
-      $sql="select * from `{{user}}`";
-      return $this->query($sql);
-    }
+	public function getAllUser(){
+		$sql="select * from `{{user}}`";
+		return $this->query($sql);
+	}
 }
 ```
 
@@ -93,7 +94,7 @@ $this->display();
 
 其中default 为默认模板名可在配置文件中更改 .  
 
-index目录为控制器名.  
+**index目录为控制器名. ** 
 
 index.html 对应的就是默认控制器index.  
 
