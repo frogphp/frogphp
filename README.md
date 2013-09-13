@@ -34,8 +34,8 @@ class IndexController extends Controller{
 
 这样就可以通过 http://localhost/index.php?c=index&amp;a=index
 
-*所有控制器都必须继承Controller基类!  
-默认controller 为index，默认的action为index*
+**所有控制器都必须继承Controller基类!  
+默认controller 为index，默认的action为index**
 
 ###3、使用数据库
 数据库配置：
@@ -65,7 +65,7 @@ class UserModel extends Model{
 }
 ```
 
-*在controller中调用getAllUser 方法:*
+**在controller中调用getAllUser 方法:**
 
 ```php
 
@@ -75,7 +75,7 @@ $userData=M('user')->getAllUser();
 
 实例化UserModel类应该使用M(‘user’) ，M方法可以帮你实现实例化model并防止在controller重复调用model而重复实例化造成的性能损失！
 
-*所有的model都必须继承Model基类。*
+**所有的model都必须继承Model基类。**
 
 ###4、使用视图
 Frogphp 框架视图层使用smarty模板引擎，重写了display方法方便使用. 
