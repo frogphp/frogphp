@@ -80,15 +80,15 @@ $userData=M('user')->getAllUser();
 
 **所有的model都必须继承Model基类。**  
 ####另:
-**返回一条具有返回值的sql语句:**  
+返回一条具有返回值的sql语句:    
 ```php
 $this->queryRow($sql,$params=array());
 ```
-**执行没有返回值的sql语句**  
+执行没有返回值的sql语句  
 ```php
 $this->execute($sql,$params=array());
 ```
-**事务处理**  
+事务处理  
 ```php
 $this->beginTransaction();//启动事物
 $this->commit();//事物提交
