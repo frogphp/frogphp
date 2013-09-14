@@ -20,7 +20,8 @@ Frogphp - php学习框架!
 ./web/common  : 存放 config.php 配置文件，functions.php 公用函数  
 ./web/controllers  : 所有控制器都在里，例如定义index控制器:IndexController.class.php  
 ./web/models : 存放项目model 例如UserModel.class.php  
-./web/runtime  : smarty 缓存  
+./web/runtime  : smarty 缓存 
+./web/plugin  : 自定义的一些类或插件  的命名规则: ImagePlugin.class.php
 ./web/views :视图  
 ###2、输出hello world
 创建控制器IndexController.class.php
@@ -77,12 +78,26 @@ $userData=M('user')->getAllUser();
 
 实例化UserModel类应该使用M(‘user’) ，M方法可以帮你实现实例化model并防止在controller重复调用model而重复实例化造成的性能损失！
 
-**所有的model都必须继承Model基类。**
+**所有的model都必须继承Model基类。**  
+返回一条具有返回值的sql语句:
+```php
+$this->queryRow($sql,$params=array());
+```
+**执行没有返回值的sql语句**  
+```php
+$this->execute($sql,$params=array());
+```
+**事务处理**  
+```php
+$this->beginTransaction();//启动事物
+$this->commit();//事物提交
+$this->rollback();//事物回滚
+```
 
 ###4、使用视图
 Frogphp 框架视图层使用smarty模板引擎，重写了display方法方便使用. 
 
-例如渲染某个视图:  
+例如渲染某个视图:
 
 ```php
 $this->display();  
