@@ -79,7 +79,8 @@ $userData=M('user')->getAllUser();
 实例化UserModel类应该使用M(‘user’) ，M方法可以帮你实现实例化model并防止在controller重复调用model而重复实例化造成的性能损失！
 
 **所有的model都必须继承Model基类。**  
-返回一条具有返回值的sql语句:
+#####另:
+**返回一条具有返回值的sql语句:**  
 ```php
 $this->queryRow($sql,$params=array());
 ```
