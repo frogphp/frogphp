@@ -34,7 +34,7 @@ defined('RUNTIME_PATH') or define('RUNTIME_PATH', APP_PATH.'Runtime/');
 include FROG_BASE."Debug.class.php";  
 //设置DEBUG模式
 if(APP_DEBUG){
-	error_reporting(E_ALL ^ E_NOTICE);   //输出除了注意的所有错误报告
+	error_reporting(E_ALL);   //输出除了注意的所有错误报告
 	Debug::start();                               //开启脚本计算时间
 	set_error_handler(array("Debug", 'Catcher')); //设置捕获系统异常
 }else{
