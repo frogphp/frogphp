@@ -33,6 +33,7 @@ class SmartyVendor extends Smarty{
 		$this->assign('__APP__',__APP__);
 		$this->assign('__URL__',__URL__);
 		$this->assign('__ACTION__',__ACTION__);
+		$this->assign('__ROUTE__',CONTROLLER_NAME.'/'.ACTION_NAME);
 		$this->assign('__SELF__',__SELF__);
 		$this->assign('siteName',C('siteName'));
 		if(is_null($template)){
