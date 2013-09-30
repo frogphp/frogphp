@@ -72,7 +72,7 @@
 			}elseif($location!=''){
 				$uri=__APP__.'/'.CONTROLLER_NAME."/".$location;
 			}else{
-				$uri=__APP__;
+				$uri=__APP__.'/'.CONTROLLER_NAME;
 			}
 			return $uri;
 		}
