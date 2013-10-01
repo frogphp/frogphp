@@ -9,8 +9,8 @@
  */
 interface  Dbinter {
 	public static function connect();
-	public function query($sql,$params);
-	public function execute($sql,$params);
+	public function query($sql,$params=array());
+	public function execute($sql,$params=array());
 	public function error();
 	public function getLastInsertId();
 	public function beginTransaction();
