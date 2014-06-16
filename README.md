@@ -3,7 +3,7 @@ Frogphp - php学习框架!
 本框架根据MVC模式编写，完全实现面向对象!  
  作者：silenceper  
  email:silenceper@gmail.com  
- website:http://silenceper.com   
+ website:http://silenceper.com/frogphp 
 
  应用案例:http://t.cn/8kS0hdM
  
